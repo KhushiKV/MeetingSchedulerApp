@@ -1,6 +1,6 @@
 
-.container1{
-    background-image: linear-gradient(to right top, #2f35a2, #005cbb, #007ac0, #0093b9, #00aab0, #1eb7b1, #39c3af, #53cfac, #62d7bb, #73dfc9, #83e7d6, #94efe3);
+.container1{  
+  background-image: linear-gradient(to right top, #2f35a2, #005cbb, #007ac0, #0093b9, #00aab0, #1eb7b1, #39c3af, #53cfac, #62d7bb, #73dfc9, #83e7d6, #94efe3);
 }
 .navbar-brand {
     font-family:'Ubuntu';
@@ -44,11 +44,12 @@
 }
 label{
   display: inline-blocks;
-  width:150px;
-  text-align: right;
+  width:160px;
+  text-align: left;
   font-family: system-ui;
   font-size:1.2rem;
   font-weight: 600;
+  padding-right:10px ;
 } 
 button{
   padding-inline: 10px;
