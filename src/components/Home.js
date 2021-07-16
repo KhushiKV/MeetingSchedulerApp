@@ -1,7 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './homestyles.css';
+import Login from './Login.js';
 
 const Home = () => {
+
+  const [goLogin, setGoLogin] = useState(false);
+
+  const handleGoLogin = () => {
+    setGoLogin(true);
+  }
+
+
+  if(goLogin){
+    return <Login />;
+  }
+
   return (
     <div className='container1'>
      <div className='container2'>
@@ -14,8 +27,8 @@ const Home = () => {
       <div className='row'>
        <div className='col-md-6 leftcont'>
         <h1 className='mainheading'>Schedule and Manage your Meetings</h1>
-        <button className='btn btn-lg btn-secondary loginbtn' type='btton'>Login</button>
-        <button className='btn btn-lg btn-outline-light registerbtn' type='btton'>Register</button>
+        <button onClick={handleGoLogin} className='btn btn-lg btn-secondary loginbtn' type='btton'>Login</button>
+        <button onClick={handleGoLogin} className='btn btn-lg btn-outline-light registerbtn' type='btton'>Register</button>
        </div>
       <div className='col-md-6'>
          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3bZzVz-Y2wGjFA_dgA-eYVcosMU465F8ONQ&usqp=CAU' alt='calendarimage' className='mainimage' />
