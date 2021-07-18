@@ -7,12 +7,14 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "compression": "^1.7.4",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "jquery": "^3.6.0",
+    "mongoose": "^5.13.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -25,8 +27,8 @@
     "eject": "react-scripts eject",
     "webpack": "webpack -w",
     "dev": "nodemon --exec 'npm run webpack &&  COMPILER_ENV=server babel-node src/server.js'",
-  "webpack-production": "NODE_ENV=production webpack -p",
-  "babel-production": "NODE_ENV=production COMPILER_ENV=server babel --out-dir dist src"
+    "webpack-production": "NODE_ENV=production webpack -p",
+    "babel-production": "NODE_ENV=production COMPILER_ENV=server babel --out-dir dist src"
   },
   "eslintConfig": {
     "extends": [
