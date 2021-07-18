@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+
+<div class="container mt-5 text-center">
+  <form class="form" action="/create" method="post">
+    <div class="form-floating">
+      <input type="text" name="scheduleTitle" class="form-control" id="floatingTitle" placeholder="Event" autocomplete="off">
+      <label for="floatingTitle" autocomplete="off">Event Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" name="scheduleTime" class="form-control" id="floatingSnippet" placeholder="Happy" autocomplete="off">
+      <label for="floatingSnippet" autocomplete="off">Enter Details</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" name="scheduleId" class="form-control" id="floatingId" placeholder="Happy" autocomplete="off">
+      <label for="floatingId" autocomplete="off">Enter meeting Id</label>
+    </div>
+    <button type="submit" name="button" class="btn scheduleButton mt-3 text-light">Schedule</button>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>
+© 2021 GitHub, Inc.
