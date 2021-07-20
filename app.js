@@ -9,7 +9,6 @@ import ReactDOM from 'react-dom';
 import path from 'path';
 const __dirname = path.resolve();
 
-
 const app =express();
 
 mongoose.connect("mongodb://localhost:27017/meetingDB", {useNewUrlParser: true, useUnifiedTopology: true});
@@ -26,8 +25,6 @@ const Schedule = mongoose.model("Schedule", meetingSchema);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
-
 
 app.get("/",(req,res)=>{
 
@@ -47,6 +44,10 @@ app.get("/create", (req,res)=>{
   res.render("create");
 });
 
+app.get("/calendar", (req, res)=>{
+  res.render("calendar");
+});
+
 app.get("/myschedule", (req, res)=>{
   Schedule.find({}, (err, meetings)=>{
     res.render("myschedule", {
@@ -54,8 +55,6 @@ app.get("/myschedule", (req, res)=>{
     });
   });
 });
-
-
 
 app.post("/create", (req, res)=>{
   let meeting = new Schedule({
@@ -82,10 +81,6 @@ app.post("/delete", (req, res)=>{
     }
   });
 });
-
-
-
-
 
 app.listen(3000,function(){
   console.log("successfully started the server!");

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Calendar
+  </title>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/schedulestyles.css">
+</head>
+
+<body class="light">
+  <nav class="navbar navbar-expand-md navbar-light text-dark">
+    <div class="container-lg">
+      <a href="/schedulehome" class="navbar-brand">
+        <span class="">
+          MEETING SCHEDULER
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/schedulehome">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create">New Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logOut">Log-out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row my-3 align-text-center justify-content-center g-0">
+    <div class="col-8 col-lg-4 col-xl-4">
+      <div class="calendar">
+        <div class="calendar-header">
+          <span class="month-picker" id="month-picker">February</span>
+          <div class="year-picker">
+            <span class="year-change" id="prev-year">
+              <pre><</pre>
+            </span>
+            <span id="year">2021</span>
+            <span class="year-change" id="next-year">
+              <pre>></pre>
+            </span>
+          </div>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-week-day">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar-days"> </div>
+        </div>
+        <div class="calendar-footer">
+          <div class="toggle">
+            <span>Dark Mode</span>
+            <div class="dark-mode-switch">
+              <div class="dark-mode-switch-ident"></div>
+            </div>
+          </div>
+        </div>
+        <div class="month-list"></div>
+      </div>
+    </div>
+    <div class="col-8 col-lg-4 col-xl-4">
+      <div class="container mt-5 text-center">
+        <form class="form" action="/create" method="post">
+          <div class="form-floating">
+            <input type="text" name="scheduleTitle" class="form-control" id="floatingTitle" placeholder="Event" autocomplete="off">
+            <label for="floatingTitle" autocomplete="off">Event Name</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" name="scheduleTime" class="form-control" id="floatingSnippet" placeholder="Happy" autocomplete="off">
+            <label for="floatingSnippet" autocomplete="off">Enter Details</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" name="scheduleId" class="form-control" id="floatingId" placeholder="Happy" autocomplete="off">
+            <label for="floatingId" autocomplete="off">Enter meeting Id</label>
+          </div>
+          <button type="submit" name="button" class="btn btn-secondary scheduleButton mt-3 text-light">Schedule</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="calendar.js" charset="utf-8"></script>
+</body>
+
+</html>
