@@ -64,13 +64,5 @@
     "webpack-cli": "^4.7.2"
   },
   "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KSneha23/MeetingSchedulerApp.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KSneha23/MeetingSchedulerApp/issues"
-  },
-  "homepage": "https://github.com/KSneha23/MeetingSchedulerApp#readme"
+  "license": "ISC"
 }
