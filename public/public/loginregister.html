@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="430616652604-ef49p6pb1bd5o85qk5op0g0stpc6p3kl.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <title>Meeting Scheduler App</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/titleicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./loginregisterstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3ac01113a.js" crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/react@latest/umd/react.production.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
+
+        <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+function signOut() {
+  document.getElementById("retrigger").click();
+  var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+
+    });
+}
+
+</script>
+
+  </head>
+
+  <body >
+
+
+    <div class="g-signin2 btn btn-lg googlediv" data-onsuccess="onSignIn" style="width:395px;height:70px;"></div>
+    <a href="/schedulehome" id="trigger"></a>
+    <a href="/loginregister" id="retrigger"></a>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+
+    const {Paper} = MaterialUI;
+    const {useState} = React;
+
+    function onSignIn(gUser){
+      var profile = gUser.getBasicProfile();
+      console.log('Given Name: ' + profile.getGivenName());
+      ReactDOM.render(<DecisionPage />,document.querySelector('#root'));
+    }
+
+
+
+      function DecisionPage() {
+        return (
+          <div className="container1">
+             <Paper className='formpaper' variant='outlined' elevation={8} >
+             <div class="d-grid gap-2">
+               <button type="button" className="btn btn-lg btn-danger googlebtn" onClick={()=>document.getElementById("trigger").click()}><i class="fas fa-calendar-alt"></i>  Continue to the App -></button>
+               <button type="button" className="btn btn-lg btn-secondary googlebtn" onClick={signOut}><i class="fas fa-power-off"></i>  Log Out</button>
+             </div>
+
+         </Paper>
+     </div>
+      );
+      }
+
+
+
+      function Login() {
+
+       const [isSignUp, setisSignUp] = useState(false);
+
+       const route = isSignUp?"/signup":"/login";
+
+
+        return (
+
+          <div className="container1">
+
+
+             <Paper className='formpaper' variant='outlined' elevation={8} >
+              <h1 className="header">
+                  {isSignUp?"Sign Up":"Log In"}
+              </h1>
+              <form action={route} method="POST" className="form">
+              {isSignUp?<div>
+              <div>
+                 <label for="fname">First Name:</label>
+                 <input type="text" name="fname" placeholder='John'/>
+              </div>
+              <br></br>
+              <div>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" placeholder='Geller'/>
+              </div>
+              <br></br>  </div>:null}
+
+                  <div>
+                      <label for="email">Email:</label>
+                      <input type="text" name="email" placeholder='abc@x.com'/>
+                  </div>
+                  <br></br>
+                  <div>
+                      <label for="password">Password:</label>
+                      <input name="password" type="password" />
+                  </div>
+                    <br></br>
+
+                  {isSignUp?<div><div>
+                      <label for="confirmpassword">Retype Password:</label>
+                      <input name="confirmpassword" type="password" />
+                  </div></div>:null}
+
+                  <button type="submit" className="btn btn-lg btn-outline-success routingbtn">{isSignUp?"Sign Up":"Sign In"}</button>
+                  <br></br><br></br>
+
+                  </form>
+                  <p className="signupmessage"><i>{isSignUp?"Already a user? ":"Don't have an account yet? "}</i><button onClick={()=>{setisSignUp((prev)=>!prev)}} className="btn btn-md btn-outline-success">{isSignUp?"Sign In":"Sign Up"}</button> </p>
+
+              </Paper>
+          </div>
+
+        );
+      }
+
+      ReactDOM.render(<Login />,document.querySelector('#root'));
+    </script>
+
+
+
+  </body>
+
+</html>
+<!-- <div class="d-grid gap-2">
+  <button type="button" className="btn btn-lg btn-danger googlebtn" dataOnsuccess={onSignIn}><i class="fab fa-google"></i>   Login Using Google</button>
+</div> -->
+<!-- <GoogleLogin
+ clientId='430616652604-ef49p6pb1bd5o85qk5op0g0stpc6p3kl.apps.googleusercontent.com'
+ onSuccess={googleSuccess}
+ onFailure={googleFailure}
+ cookiePolicy="single_host_origin"
+ clientSecret="l3jRQGLNyGHLi33BnGmgme3O"
+ render={renderProps=>(<Button
+  className="googlediv"
+  color="primary"
+  fullWidth
+  onClick={renderProps.onClick}
+  disabled={renderProps.disabled}
+  variant="contained"> Google sign In</Button>
+ )}
+/> -->
