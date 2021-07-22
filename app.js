@@ -11,7 +11,7 @@ const __dirname = path.resolve();
 
 const app =express();
 
-mongoose.connect("mongodb://localhost:27017/meetingDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-sneha:test123@cluster0.q2lcn.mongodb.net/meetingDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.set("view engine","ejs");
 
