@@ -15,17 +15,29 @@ html,body {
   padding: 0;
 }
 
+.googlediv {
+  position:absolute;
+
+  width: 395px;
+  float:center;
+  text-align: center;
+  margin-top:46px;
+
+}
+
 .container1{
   width:100%;
   padding:0;
   margin:0;
 }
+
 .formpaper{
-  width:334px;
+  width:395px;
   height:auto;
   float:center;
-  margin: 130px auto;
+  margin: 100px auto;
 }
+
 .header {
     padding-top:20px;
     padding-bottom: 55px;
@@ -35,38 +47,40 @@ html,body {
     font: italic small-caps bold 50px cursive;
     color: #78DEC7;
 }
+
 .form {
     padding-bottom: 10px;
     margin: 0 auto;
     text-align: center;
 }
 
+.routingbtn {
+  background-color:#83e7d6 ;
+}
 
 .btn-outline-success{
-  background-color:#83e7d6 ;
   margin-right:5px;
 }
-.googlebtn {
-    margin-left:10px;
-    margin-right: 10px;
-}
+
 label{
-  width:30%;
+  width:25%;
   text-align: left;
   font-family: apple chancery, cursive;
-  font-size:1.2rem;
-  font-weight: 600;
-  padding-right:10px ;
+  font-size:1.0rem;
+  font-weight: 430;
 }
+
 button{
   margin: 10px;
 }
+
 input{
-  margin: 10px;
+  margin: 5px;
   border: 1px solid powderblue;
-  border-radius:3%;
+  border-radius:5%;
   box-shadow: 0 2px 2px 0 grey;
 }
+
 .signupmessage {
   text-align:right;
 }
