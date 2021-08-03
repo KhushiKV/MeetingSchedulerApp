@@ -24,7 +24,10 @@ mongoose.connect("mongodb+srv://admin-sneha:test123@cluster0.q2lcn.mongodb.net/m
 const meetingSchema={
   title:String,
   details: String,
-  eventId:String
+  url:String,
+  start:String,
+  end:String,
+  remindTime:String
 };
 
 const userSchema = {
@@ -121,8 +124,11 @@ app.post("/login", (req,res)=>{
 app.post("/create", (req, res)=>{
   let meeting = new Schedule({
     title : req.body.scheduleTitle,
-    details : req.body.scheduleTime,
-    eventId : req.body.scheduleId
+    details : req.body.scheduleDesc,
+    url : req.body.scheduleId,
+    start:req.body.start,
+    end:req.body.end,
+    remindTime:req.body.remindTime
   });
   meeting.save((err)=>{
     if(!err){
@@ -147,3 +153,7 @@ app.post("/delete", (req, res)=>{
 app.listen(3000,function(){
   console.log("successfully started the server!");
 })
+
+
+
+
