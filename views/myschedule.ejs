@@ -4,7 +4,8 @@
   <div class="container box text-center heading">
     <h3>Your Schedule</h3>
   </div>
-  <div class="box">
+  <div id='calendar'></div>
+  <!-- <div class="box">
     <% if(newMeetings.length>0){ %>
       <% newMeetings.forEach((newMeeting)=>{ %>
         <form action="/delete" method="post">
@@ -17,7 +18,7 @@
     <% } else{ %>
       <h5 class="text-center text-muted">Yo!! No schedule Today</h5>
     <% } %>
-  </div>
+  </div> -->
 </div>
 
 <%- include("partials/footer"); -%>
