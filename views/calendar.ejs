@@ -85,12 +85,32 @@
             <label for="floatingTitle" autocomplete="off">Event Name</label>
           </div>
           <div class="form-floating">
-            <input type="text" name="scheduleTime" class="form-control" id="floatingSnippet" placeholder="Happy" autocomplete="off">
+            <input type="text" name="scheduleDesc" class="form-control" id="floatingSnippet" placeholder="Happy" autocomplete="off">
             <label for="floatingSnippet" autocomplete="off">Enter Details</label>
           </div>
           <div class="form-floating">
             <input type="text" name="scheduleId" class="form-control" id="floatingId" placeholder="Happy" autocomplete="off">
             <label for="floatingId" autocomplete="off">Enter meeting Id</label>
+          </div>
+          <div class="form-floating">
+            <input type="datetime-local" id="start" name="scheduleStart" class="form-control" placeholder="Happy" autocomplete="off">
+            <label for="start">Start date:</label>
+          </div>
+          <div class="form-floating">
+            <input type="datetime-local" id="end" name="scheduleEnd" class="form-control" placeholder="Happy" autocomplete="off">
+            <label for="end">End date(optional):</label>
+          </div>
+          <div class="form-floating">
+            <select id="remindTime" name="remindTime" class="form-control" placeholder="Happy" autocomplete="off">
+              <option value="5m">5 Minutes</option>
+              <option value="15m">15 Minutes</option>
+              <option value="30m">30 minutes</option>
+              <option value="1hr">1 Hour</option>
+              <option value="6hr">6 Hours</option>
+              <option value="12hr">12 Hours</option>
+              <option value="24hr">24 Hours</option>
+            </select>
+            <label for="remindTime">When do you want a reminder E-mail?</label>
           </div>
           <button type="submit" name="button" class="btn btn-secondary scheduleButton mt-3 text-light">Schedule</button>
         </form>
