@@ -32,3 +32,17 @@ body{
 .view{
   background-color: #00909E;
 }
+#calendar {
+  background-color: white;
+}
+
+.footer {
+    text-align: center;
+    position:fixed;
+    width:100%;
+    bottom:0;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    background-color: #B0EFEB;
+    color: #87A7B3;
+}

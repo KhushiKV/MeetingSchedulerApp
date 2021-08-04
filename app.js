@@ -11,10 +11,6 @@ import ReactDOM from 'react-dom';
 import path from 'path';
 const __dirname = path.resolve();
 
-import nodemailer from 'nodemailer';
-import schedule from 'node-schedule';
-
-
 const app =express();
 
 
@@ -29,8 +25,8 @@ const meetingSchema={
   title:String,
   details: String,
   url:String,
-  start:Date,
-  end:Date,
+  start:String,
+  end:String,
   remindTime:String
 };
 
@@ -130,8 +126,8 @@ app.post("/create", (req, res)=>{
     title : req.body.scheduleTitle,
     details : req.body.scheduleDesc,
     url : req.body.scheduleId,
-    start:req.body.scheduleStart,
-    end:req.body.scheduleEnd,
+    start:req.body.start,
+    end:req.body.end,
     remindTime:req.body.remindTime
   });
   meeting.save((err)=>{
@@ -139,7 +135,6 @@ app.post("/create", (req, res)=>{
       res.redirect("/myschedule");
     }
   });
-  emailer(req.body.email,req.body.scheduleTitle,req.body.scheduleDesc,req.body.scheduleId,req.body.scheduleStart,req.body.remindTime);
 });
 
 app.post("/delete", (req, res)=>{
@@ -159,55 +154,6 @@ app.listen(3000,function(){
   console.log("successfully started the server!");
 })
 
-const emailer=(email,title,desc,url,startDate,remindTime)=>{
-    if(remindTime==="24hr"){
-        remindTime=new Date('Jan 2, 1970, 00:00:00')
-    }
-    else if(remindTime==="12hr"){
-        remindTime=new Date('Jan 1, 1970, 12:00:00')
-    }
-    else if(remindTime==="6hr"){
-        remindTime=new Date('Jan 1, 1970, 6:00:00.000')
-    }
-    else if(remindTime==="1hr"){
-        remindTime=new Date('Jan 1, 1970, 1:00:00.000')
-    }
-    else if(remindTime==="30m"){
-        remindTime=new Date('Jan 1, 1970, 00:30:00.000')
-    }
-    else if(remindTime==="15m"){
-        remindTime=new Date('Jan 1, 1970, 00:15:00.000')
-    }
-    else if(remindTime==="5m"){
-        remindTime=new Date('Jan 1, 1970, 00:05:00.000')
-    }
-    startDate=startDate+':00.000';
-    startDate=new Date(startDate);
-    const date = new Date(startDate.getTime()-remindTime.getTime()-19800000);
-    const mailOptions = {
-        from: 'meetingschedulerxd@gmail.com',
-        to:`${email}`,
-        subject: `Remainder to ${title}`,
-        text: `Here are the details of the event:\n${title}\n${desc}\n${url}\nThis is an automated remainder sent to you by the meeting scheduler app.\n`
-    };
 
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'meetingreminderxd@gmail.com',
-            pass: 'XD;pq098',
-        }
-    });
 
-    const job = schedule.scheduleJob(date, function () {
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.log(error);
-            }
-            else {
-              console.log('Email sent!' + info.response);
-            }
-        })
-    });
-};
 
