@@ -126,6 +126,7 @@ app.post("/login", (req,res)=>{
 
 
 app.post("/create", (req, res)=>{
+
   let meeting = new Schedule({
     title : req.body.scheduleTitle,
     details : req.body.scheduleDesc,
@@ -139,7 +140,7 @@ app.post("/create", (req, res)=>{
       res.redirect("/myschedule");
     }
   });
-  emailer(req.body.email,req.body.scheduleTitle,req.body.scheduleDesc,req.body.scheduleId,req.body.scheduleStart,req.body.remindTime);
+  emailer(req.body.reminderEmail,req.body.scheduleTitle,req.body.scheduleDesc,req.body.scheduleId,req.body.scheduleStart,req.body.remindTime);
 });
 
 app.post("/delete", (req, res)=>{
@@ -158,6 +159,7 @@ app.post("/delete", (req, res)=>{
 
 
 const emailer=(email,title,desc,url,startDate,remindTime)=>{
+
     if(remindTime==="24hr"){
         remindTime=new Date('Jan 2, 1970, 00:00:00')
     }
@@ -185,7 +187,7 @@ const emailer=(email,title,desc,url,startDate,remindTime)=>{
     const mailOptions = {
         from: 'meetingschedulerxd@gmail.com',
         to:`${email}`,
-        subject: `Remainder to ${title}`,
+        subject: `Reminder to ${title}`,
         text: `Here are the details of the event:\n${title}\n${desc}\n${url}\nThis is an automated remainder sent to you by the meeting scheduler app.\n`
     };
 

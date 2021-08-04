@@ -29,13 +29,15 @@
         <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+
 function signOut() {
-  document.getElementById("retrigger").click();
+
   var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
 
     });
+    document.getElementById("retrigger").click();
 }
 
 </script>
@@ -53,16 +55,15 @@ function signOut() {
 
     <script type="text/babel">
 
-    const {Paper} = MaterialUI;
-    const {useState} = React;
-
     function onSignIn(gUser){
+      ReactDOM.render(<DecisionPage />,document.querySelector('#root'));
       var profile = gUser.getBasicProfile();
       console.log('Given Name: ' + profile.getGivenName());
-      ReactDOM.render(<DecisionPage />,document.querySelector('#root'));
+
     }
-
-
+    
+    const {Paper} = MaterialUI;
+    const {useState} = React;
 
       function DecisionPage() {
         return (
@@ -135,9 +136,10 @@ function signOut() {
           </div>
 
         );
-      }
 
+      }
       ReactDOM.render(<Login />,document.querySelector('#root'));
+
     </script>
 
 
