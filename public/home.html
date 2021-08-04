@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meeting Scheduler App</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="/titleicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./homestyles.css">
-  <script src="https://kit.fontawesome.com/f3ac01113a.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Scheduler App</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/titleicon.png">
+    <link rel="stylesheet" href="./homestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3ac01113a.js" crossorigin="anonymous"></script>
 
-  <script src="https://unpkg.com/react@latest/umd/react.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/react@latest/umd/react.production.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
 
-</head>
+  </head>
 
-<body>
-  <div id="root"></div>
+  <body>
+    <div id="root"></div>
 
-  <script type="text/babel">
+    <script type="text/babel">
 
-    function Home(){
+      function Home(){
         return (
           <div className='container1'>
            <div className='container2'>
             <nav className="navbar navbar-light nav1" style={{paddingTop:'30px',paddingBottom:'20px'}}>
                 <div className="container-fluid">
-                <span className="navbar-brand mb-0 h1" style={{fontSize:'2.6rem',color:'#E8F6EF', paddingLeft:" 20px"}}>Meet Scheduler</span>
-                <span className="navbar-text fw-bold"><a href='#carouselExampleControls'className='togglebar text-secondary' style={{paddingRight:'75px', letterSpacing:"0.75px"}}>Features</a></span>
+                <span className="navbar-brand mb-0 h1" style={{fontSize:'2.6rem',color:'#E8F6EF'}}>MeetScheduler</span>
+                <span className="navbar-text"><a href='#carouselExampleControls'className='togglebar' style={{color:'#E8F6EF',paddingRight:'20px'}}>Features</a></span>
                 </div>
            </nav>
             <div className='row'>
@@ -51,7 +44,7 @@
               <a className='btn btn-lg btn-outline-light registerbtn' href="/loginregister" role='button'>Register</a>
              </div>
             <div className='col-md-6'>
-               <img src='https://www.gannett-cdn.com/presto/2021/08/02/NAAS/3249b137-d5c7-422b-a9b7-6572431a7472-Calendar.JPG?width=660&height=337&fit=crop&format=pjpg&auto=webp' alt='calendarimage' className='mainimage' />
+               <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3bZzVz-Y2wGjFA_dgA-eYVcosMU465F8ONQ&usqp=CAU' alt='calendarimage' className='mainimage' />
             </div>
             </div>
             </div>
@@ -93,8 +86,8 @@
     </script>
 
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 
 </html>

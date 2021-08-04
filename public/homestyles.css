@@ -24,12 +24,13 @@ html,body {
   background-image: linear-gradient(to right top, #2f35a2, #005cbb, #007ac0, #0093b9, #00aab0, #1eb7b1, #39c3af, #53cfac, #62d7bb, #73dfc9, #83e7d6, #94efe3);
 }
 .navbar-brand {
-  font-family: 'Francois One', sans-serif;
+  font-family:'Ubuntu';
 }
 .togglebar {
   text-decoration : none;
   font-size:1.2rem;
   font-family:'Ubuntu';
+
 }
 .mainimage {
   width:100%;
@@ -41,14 +42,14 @@ html,body {
   z-index:1;
 }
 .mainheading {
-  font-family: 'PT Serif', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size:4.1rem;
   line-height: 1.1;
   font-weight:bold;
   text-align:left;
   padding: 20% 2% 6% 15%;
   color: #F9F9F9;
-  /* text-shadow: 2px 2px #DDDDDD; */
+  text-shadow: 2px 2px #DDDDDD;
 }
 .leftcont {
   text-align:center;
@@ -77,9 +78,6 @@ html,body {
   font-size: 2rem;
   color: #053742;
   font-family: 'Otomanopee One', sans-serif;
-}
-a:hover{
-  color: white;
 }
 .slidediv p {
   font-family: 'Source Sans Pro', sans-serif;

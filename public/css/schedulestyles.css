@@ -3,9 +3,6 @@ body{
   background-attachment: fixed;
   background-size: cover;
 }
-/* body{
-    overflow-y : auto;
-} */
 .navbar{
   padding: 20px;
   background-color: #EBFFFA;
@@ -34,20 +31,4 @@ body{
 }
 .view{
   background-color: #00909E;
-}
-/* footer {
-  position:absolute;
-  bottom:0;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto 0 auto;
-  margin-top: 10px;
-  padding: 20px;
-  background-color: #B0EFEB;
-  color: #87A7B3;
-} */
-/* .blog{
-  overflow-y: scroll;
-height: 700px;
-width: 500px;
 }
