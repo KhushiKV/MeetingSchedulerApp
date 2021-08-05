@@ -31,6 +31,7 @@ const meetingSchema={
   url:String,
   start:Date,
   end:Date,
+  allDay: Boolean,
   remindTime:String
 };
 
@@ -115,7 +116,7 @@ app.post("/login", (req,res)=>{
           if(!err){
             if(result === true){
               res.render("schedulehome");
-            }else{console.log(err);res.redirect("/loginregister");}
+            }else{  res.redirect("/loginregister");}
           }
         })
       }
@@ -133,14 +134,16 @@ app.post("/create", (req, res)=>{
     url : req.body.scheduleId,
     start:req.body.scheduleStart,
     end:req.body.scheduleEnd,
+    allDay: false,
     remindTime:req.body.remindTime
   });
   meeting.save((err)=>{
     if(!err){
+      emailer(req.body.reminderEmail,req.body.scheduleTitle,req.body.scheduleDesc,req.body.scheduleId,req.body.scheduleStart,req.body.remindTime);
       res.redirect("/myschedule");
-    }
+    } else console.log(err);
   });
-  emailer(req.body.reminderEmail,req.body.scheduleTitle,req.body.scheduleDesc,req.body.scheduleId,req.body.scheduleStart,req.body.remindTime);
+
 });
 
 app.post("/delete", (req, res)=>{
@@ -159,6 +162,7 @@ app.post("/delete", (req, res)=>{
 
 
 const emailer=(email,title,desc,url,startDate,remindTime)=>{
+ console.log("initiated");
 
     if(remindTime==="24hr"){
         remindTime=new Date('Jan 2, 1970, 00:00:00')
