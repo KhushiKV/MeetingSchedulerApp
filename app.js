@@ -215,8 +215,8 @@ const emailer=(email,title,desc,url,startDate,remindTime)=>{
     });
 };
 
+const port=process.env.PORT || 3000;
 
-
-app.listen(3000,function(){
+app.listen(port,function(){
   console.log("successfully started the server!");
 });
