@@ -20,7 +20,7 @@
             <p class="mb-0 fw-bold title"><%=newMeeting.title%></p>
             <p class="mt-0 mb-0 fw-bold text-secondary details"><%=newMeeting.details%></p>
             <a href="https://<%=newMeeting.url%>" class="mt-0 mb-0 fw-bold text-secondary details "><%=newMeeting.url%></a>
-            <p class="mt-0 mb-0 fw-bold text-secondary details">Starts:- <%=newMeeting.start.getDate()%>-<%=newMeeting.start.getMonth()%>-<%=newMeeting.start.getYear()%> ,<%=newMeeting.start.getHours()%>:<%=newMeeting.start.getMinutes()%></p>
+            <p class="mt-0 mb-0 fw-bold text-secondary details">Starts:- <%=newMeeting.start?.getDate()%>-<%=newMeeting.start?.getMonth()%>-<%=newMeeting.start?.getYear()%> ,<%=newMeeting.start?.getHours()%>:<%=newMeeting.start?.getMinutes()%></p>
             <p class="mt-0 mb-0 fw-bold text-secondary details">Ends    :- <%=newMeeting.end?.getDate()%>-<%=newMeeting.end?.getMonth()%>-<%=newMeeting.end?.getYear()%> ,<%=newMeeting.end?.getHours()%>:<%=newMeeting.end?.getMinutes()%></p>
            <hr />
           </div>

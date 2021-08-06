@@ -24,7 +24,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "webpack": "webpack -w",
     "dev": "nodemon --exec 'npm run webpack &&  COMPILER_ENV=server babel-node src/server.js'",
     "webpack-production": "NODE_ENV=production webpack -p",
@@ -62,9 +65,6 @@
     "nodemon": "^2.0.12",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.7.2"
-  },
-  "engines": {
-    "node": "14.x"
   },
   "author": "",
   "license": "ISC"
