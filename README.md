@@ -7,18 +7,8 @@ All of the scheduled meetings can be viewed on a google-like calendar along with
   
 This forms just a gist of the overall App. The User Interface and Navigation between pages have been set up keeping in mind the comfort of users, to provide them with an enjoyable experience.  
   
-## IITISoC '21:
-The project is created as part of the IIT Indore Summer of Code for the year 2021 (IITISoC '21). Time and again, IITISoC has brought forth plethora of oppportunities before students to tickle their imagination and delve deeper into the technicalities of an hands-on experience with real-world like projects. It has always kept up the spirit of introducing students to the wonderful and intriguing world of Software Development and Open-Source. This Web Application is also one of the tech projects in the Web Development Domain created and developed meticulously to contribute to the enriching experience of IITISoC.  
-
-## Mentors and Team Members:
-Heartfelt thanks and sincere gratitude to the mentors- Dipin Garg and Krishanu Saini for their continuing support and the most invaluable guidance throughout the development of the project. Their genuine and unwavering faith in the team members kept us going. Needless to say, their technical knacks in places where we found ourselves caught, helped us gear up and accomplish the project well.  
-  
-  
-Team Members: K Sneha, Khushi Verma, Mir Razee, Harshitha Budati  
-  
-  
-All of the team members worked together on the project, most of the times work was divided among the four of us without any clear demarcation as everyone co-operated. Broadly speaking, Sneha created the initial schedular Express ejs files and set up navigation amongst them. A calendar was also added by her to make the page look better. Khushi created the Home page and Login/Signup React pages and set up the backend bone for the project using Node and Express. Calendar logic like display of events on the google-like calendar and other related settings were also incorporated by her. Mir handled the Meeting Reminder set up and working, also created structure for login page and worked on the calendar addition. Harshitha designed a signup page for the project and worked with the calendar design for the second calendar for display. With this team-work, the project was completed beautifully.  
-
+    
+    
 ## Using the project App
 The fully-fledged app is deployed and hosted at https://meeting-scheduler-app0.herokuapp.com/ .By clicking on this link, it will redirect you the Meeting Scheduler App.  
   
@@ -31,3 +21,19 @@ One can also run the app locally on their systems at localhost:3000 by using the
 5. Finally, type and run ## node app.js
 6. Then head back to your browser, open a new tab and type in ## http://localhost:3000
 With this, you will see the App running on your system.  
+
+  
+## IITISoC '21:
+The project is created as part of the IIT Indore Summer of Code for the year 2021 (IITISoC '21). Time and again, IITISoC has brought forth plethora of oppportunities before students to tickle their imagination and delve deeper into the technicalities of an hands-on experience with real-world like projects. It has always kept up the spirit of introducing students to the wonderful and intriguing world of Software Development and Open-Source. This Web Application is also one of the tech projects in the Web Development Domain created and developed meticulously to contribute to the enriching experience of IITISoC.  
+
+## Mentors and Team Members:
+Heartfelt thanks and sincere gratitude to the mentors- Dipin Garg and Krishanu Saini for their continuing support and the most invaluable guidance throughout the development of the project. Their genuine and unwavering faith in the team members kept us going. Needless to say, their technical knacks in places where we found ourselves caught, helped us gear up and accomplish the project well.  
+  
+  
+Team Members: K Sneha, Khushi Verma, Mir Razee, Harshitha Budati  
+  
+  
+All of the team members worked together on the project, most of the times work was divided among the four of us without any clear demarcation as everyone co-operated. Broadly speaking, Sneha created the initial schedular Express ejs files and set up navigation amongst them. A calendar was also added by her to make the page look better. Khushi created the Home page and Login/Signup React pages and set up the backend bone for the project using Node and Express. Calendar logic like display of events on the google-like calendar and other related settings were also incorporated by her. Mir handled the Meeting Reminder set up and working, also created structure for login page and worked on the calendar addition. Harshitha designed a signup page for the project and worked with the calendar design for the second calendar for display. With this team-work, the project was completed beautifully.  
+
+  
+  
