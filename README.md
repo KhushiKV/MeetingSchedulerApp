@@ -1,4 +1,5 @@
 
+
 ## About the project:
 The project explores the idea of creating a user-friendly and customizable Meeting Scheduler App. The developed Web App lets users collaborate on the site to seamlessly add/ view/ edit/ delete their events in a very convenient and efficient manner.  
   
@@ -9,7 +10,7 @@ All of the scheduled meetings can be viewed on a google-like calendar along with
 This forms just a gist of the overall App. The User Interface and Navigation between pages have been set up keeping in mind the comfort of users, to provide them with an enjoyable experience. The web pages are made responsive to sooth the mobile / tablet users as well.  
   
     
-A Presentation entailing the main features of the App can be found by clicking here -> [MeetingSchedulerApp.pptx](https://github.com/KhushiKV/Web15_MeetingSchedulerApp/files/6949592/MeetingSchedulerApp.pptx)
+A Presentation entailing the main features of the App can be found by clicking here -> [MeetingSchedulerApp.pptx](https://github.com/KhushiKV/Web15_MeetingSchedulerApp/files/6949597/MeetingSchedulerApp.pptx)
  
   
     
