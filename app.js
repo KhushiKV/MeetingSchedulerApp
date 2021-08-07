@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+
 import express from "express";
 
 import  ejs from "ejs";
@@ -25,7 +24,7 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGOOSEPATH, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-sneha:test123@cluster0.q2lcn.mongodb.net/meetingDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 const meetingSchema={
   title:String,
