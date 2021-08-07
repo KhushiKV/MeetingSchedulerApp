@@ -14,7 +14,7 @@ The fully-fledged app is deployed and hosted at https://meeting-scheduler-app0.h
   
   
 One can also run the app locally on their systems at localhost:3000 by using the following commands on their CLI:  
-1. Dowmload the ZIP file from the main branch of this Repository and unzip it on your PC.
+1. Dowmload the ZIP file from the main branch of this Repository https://github.com/KhushiKV/Web15_MeetingSchedulerApp.git and unzip it on your PC.
 2. Note the location/ path of the unzipped file and cd into that folder that has all the file and folders as can be seen on the main branch using ## cd FolderPath , on your      command line.
 3. Run ## npm init
 4. Run ## npm i
